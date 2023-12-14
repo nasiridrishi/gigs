@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('listings', function (Blueprint $table) {
             $table->id();
+            $table->string("title");
+            $table->text("tags");
+            $table->text("company");
+            $table->text("location");
+            $table->text("email");
+            $table->text("website");
+            $table->longText("description");
             $table->timestamps();
+
         });
     }
 

@@ -18,7 +18,13 @@ class ListingFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => $this->faker->sentence(),
+            'tags' => $this->faker->words(5),
+            'company' => $this->faker->company(),
+            'email' => $this->faker->email(),
+            'website' => $this->faker->url(),
+            'location' => $this->faker->city(),
+            'description' => $this->faker->paragraph(5),
         ];
     }
 }
